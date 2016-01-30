@@ -8,6 +8,13 @@ module.exports = {
         additionalSoftware: [],
         actorTypes: [],
         sensorTypes: [],
+        state: [{
+            id: "phValue",
+            label: "pH Value",
+            type: {
+                id: "decimal"
+            }
+        }],
         services: [],
         configuration: []
     },
@@ -34,6 +41,12 @@ function pHMeter() {
         var deferred = q.defer();
 
         if (this.isSimulated()) {
+            this.interval = setInterval(function () {
+                this.state.pHValue = 5 + 0.1 * new Date().getTime() % 2;
+
+                this.publishStateChange();
+            }.bind(this), this.configuration.interval);
+
             deferred.resolve();
         } else {
             if (!this.serialport) {
@@ -68,6 +81,9 @@ function pHMeter() {
         var deferred = q.defer();
 
         if (this.isSimulated()) {
+            if (this.interval) {
+                clearInterval(this.interval);
+            }
         } else {
         }
 
