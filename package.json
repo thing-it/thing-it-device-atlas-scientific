@@ -1,6 +1,6 @@
 {
   "name": "thing-it-device-atlas-scientific",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "[thing-it-node] Device Plugin Atlas Scientific meter devices.",
   "authors": "Marc Gille",
   "keywords": [
@@ -15,6 +15,7 @@
     "url": "https://github.com/marcgille/thing-it-device-atlas-scientific"
   },
   "dependencies": {
+    "lodash": "^4.1.0",
     "q": "^1.4.1",
     "serialport": "^2.0.6",
     "thing-it-test": "0.0.15"
