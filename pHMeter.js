@@ -69,6 +69,7 @@ function pHMeter() {
             this.serialport.write("C,1\r");
 
             this.serialPort.on("data", function (data) {
+                console.log(data);
             });
 
             deferred.resolve();
