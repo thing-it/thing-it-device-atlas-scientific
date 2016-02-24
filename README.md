@@ -16,7 +16,18 @@ Aquaponics systems.
 
 ## Installation
 
-### Prerequisites for Serial Port Communication
+### Hardware Setup
+
+Connect your [Atlas Scientific](http://atlas-scientific.com/) metering product to the GPIOs of your Single-Board Computer
+e.g. the pH probe to your Raspberry Pi Zero as follows
+
+<p align="center"><a href="./documentation/images/hardware-setup.png"><img src="./documentation/images/mobile-ui.png" width="70%" height="70%"></a></p>
+
+or for details like in the wireframe
+
+<p align="center"><a href="./documentation/images/wireframe.png"><img src="./documentation/images/mobile-ui.png" width="70%" height="70%"></a></p>
+
+[Atlas Scientific](http://atlas-scientific.com/) has plenty of documentation for the setup of the different probes.
 
 ### Installation of NodeJS and [thing-it-node]
 
