@@ -65,11 +65,6 @@ tin run
 Install the **thing-it Mobile App** from the Apple Appstore or Google Play and set it up to connect to **[thing-it-node]** 
 locally as described [here](https://thing-it.com/thing-it/#/documentationPanel/mobileClient/connectionModes) or just connect your browser under 
 [http://localhost:3001](http://localhost:3001).
- 
-### Atlas Device Setup
-
-* Connect your Atlas device to your device circuit via BNC.
-* Connect the device circuits to your GPIOs, e.g. for the [pH Circuit](http://atlas-scientific.com/_files/instructions/ezo-ph-wiringdiagram.pdf).
 
 ## Mobile UI
 
