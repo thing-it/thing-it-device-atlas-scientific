@@ -11,7 +11,7 @@ This allows you to
 * define complex scenes, storyboards and timer controlled execution 
 
 by means of [thing-it-node](https://github.com/marcgille/thing-it-node) and [thing-it.com](http://www.thing-it.com), e.g. to set up
-Aquaponics systems.
+Aquaponics solution.
 
 
 ## Installation
@@ -45,11 +45,11 @@ npm install -g thing-it-node
 
 The **[thing-it-device-atlas-scientific]** Plugin is installed with **[thing-it-node]**, hence there is no need to install it separately.
 
-The Plugin supports Autodiscovery for an existing Z-Wave network and its devices, hence you only have to create a directory in which you intend to run the configuration, e.g.
+The Plugin supports Autodiscovery for connected I2C devices, hence you only have to create a directory in which you intend to run the configuration, e.g.
  
 ```
-mkdir ~/hue-test
-cd ~/hue-test
+mkdir ~/atlas-scientific-test
+cd ~/atlas-scientific-test
 ```
 
 and invoke
@@ -70,13 +70,23 @@ locally as described [here](https://thing-it.com/thing-it/#/documentationPanel/m
 
 ## Mobile UI
 
-The following screenshot shows the Node Page of the [sample configuration]("./examples.configuration"):
+The following screenshot shows the Node Page of the [sample configuration]("./examples.configuration"), which just defines 3 pH Meters:
 
 <p align="center"><a href="./documentation/images/mobile-ui.png"><img src="./documentation/images/mobile-ui.png" width="70%" height="70%"></a></p>
 
+
 ## Where to go from here ...
 
-After completing the above, you may be interested in
+Obviously, you may set up more complex setups, e.g. an aquaponics solution with
+
+* water temperature sensors
+* water level sensors
+* switches for pumps, feeders, shades and fans, 
+* cameras to watch the fish ponds remotely etc.
+
+Or, you want to distribute a set of sensors and correlate their historical data with wheather data and other things on [thing-it.com](https://www.thing-it.com).
+
+You may also be interested in
 
 * Configuring additional [Devices](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/deviceConfiguration), 
 [Groups](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/groupConfiguration), 
