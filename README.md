@@ -27,7 +27,7 @@ or for details like in the wireframe below
 
 <p align="center"><a href="./documentation/images/wireframe.png"><img src="./documentation/images/wireframe.png" width="70%" height="70%"></a></p>
 
-note that the i2c data wires need a 10k pullup resistor.
+note that the I2C data wires need a 10k pullup resistor.
 
 [Atlas Scientific](http://atlas-scientific.com/) has plenty of documentation for the setup of the different probes.
 
@@ -97,4 +97,5 @@ You may also be interested in
 * Use [thing-it.com](https://www.thing-it.com) to safely connect your Node Box from everywhere, manage complex configurations, store and analyze historical data 
 and offer your configurations to others on the **[thing-it] Mesh Market**.
 * Explore other Device Plugins like [Texas Instruments Sensor Tag](https://www.npmjs.com/package/thing-it-device-ti-sensortag), [Plugwise Smart Switches](https://www.npmjs.com/package/thing-it-device-plugwise) and many more. For a full set of 
-Device Plugins search for **thing-it-device** on [npm](https://www.npmjs.com/). Or [write your own Plugins](https://github.com/marcgille/thing-it-node/wiki/Plugin-Development-Concepts).
+Device Plugins search for **thing-it-device** on [npm](https://www.npmjs.com/). 
+* Or [write your own Plugins](https://github.com/marcgille/thing-it-node/wiki/Plugin-Development-Concepts).
