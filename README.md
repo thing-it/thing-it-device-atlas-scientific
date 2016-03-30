@@ -23,7 +23,7 @@ e.g. the pH probe to your Raspberry Pi Zero as follows
 
 <p align="center"><a href="./documentation/images/hardware-setup.jpg"><img src="./documentation/images/hardware-setup.jpg" width="70%" height="70%"></a></p>
 
-or for details like in the wireframe
+or for details like in the wireframe below
 
 <p align="center"><a href="./documentation/images/wireframe.png"><img src="./documentation/images/wireframe.png" width="70%" height="70%"></a></p>
 
