@@ -27,6 +27,8 @@ or for details like in the wireframe below
 
 <p align="center"><a href="./documentation/images/wireframe.png"><img src="./documentation/images/wireframe.png" width="70%" height="70%"></a></p>
 
+note that the i2c data wires need a 10k pullup resistor.
+
 [Atlas Scientific](http://atlas-scientific.com/) has plenty of documentation for the setup of the different probes.
 
 ### Installation of NodeJS and [thing-it-node]
