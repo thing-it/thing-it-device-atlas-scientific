@@ -74,12 +74,12 @@ The following screenshot shows the Node Page of the [sample configuration]("./ex
 
 <p align="center"><a href="./documentation/images/mobile-ui.png"><img src="./documentation/images/mobile-ui.png" width="70%" height="70%"></a></p>
 
-(with the above values for fish ponds you probably regret not to have defined a **[thing-it-node]** event processor to send alerts, activate the pump 
-or the like ... 
+(with the above values for fish ponds, you probably regret not to have defined a **[thing-it-node]** event processor to send alerts, activate the pump 
+or the like ...) 
 
 ## Where to go from here ...
 
-Obviously, you may set up more complex setups, e.g. an aquaponics solution with
+Obviously, you may set up more complex configuration, e.g. an aquaponics solution with
 
 * water temperature sensors,
 * water level sensors,
