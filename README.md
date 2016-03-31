@@ -74,7 +74,8 @@ The following screenshot shows the Node Page of the [sample configuration]("./ex
 
 <p align="center"><a href="./documentation/images/mobile-ui.png"><img src="./documentation/images/mobile-ui.png" width="70%" height="70%"></a></p>
 
-(with the above values for fish ponds you probably regret not to have defined a **[thing-it-node]** event processor with)
+(with the above values for fish ponds you probably regret not to have defined a **[thing-it-node]** event processor to send alerts, activate the pump 
+or the like ... 
 
 ## Where to go from here ...
 
