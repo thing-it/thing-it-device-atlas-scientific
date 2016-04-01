@@ -40,7 +40,7 @@ function pHMeter() {
      *
      */
     var PH_ADDR = 0x63,
-        PH_CMD_INFO = 0x49,
+//        PH_CMD_INFO = 0x49,
         READ_DELAY = 1000,
         READ_LENGTH = 32,
         PH_CMD_READ = 0x52;
