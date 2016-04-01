@@ -17,7 +17,7 @@
   "dependencies": {
     "lodash": "^4.1.0",
     "q": "^1.4.1",
-    "serialport": "^2.0.6",
+    "i2c-bus": "^1.0.2",
     "thing-it-test": "0.0.15"
   }
 }

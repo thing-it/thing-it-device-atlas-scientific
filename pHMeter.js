@@ -38,6 +38,14 @@ function pHMeter() {
     /**
      *
      */
+
+    var PH_ADDR = 0x63,
+        PH_CMD_INFO = 0x49,
+        READ_DELAY = 1000,
+        READ_LENGTH = 32,
+        PH_CMD_READ = 0x52;
+
+
     pHMeter.prototype.start = function () {
         var deferred = q.defer();
 
@@ -52,25 +60,28 @@ function pHMeter() {
 
             deferred.resolve();
         } else {
-            if (!this.serialport) {
-                this.serialport = require('serialport');
+            if (!this.i2c) {
+                this.i2c = require('i2c-bus');
             }
 
-            // Clear serial buffer
+            var i2c1 = this.i2c.openSync(1);
 
-            this.serialport.write("\r");
+            console.log(this.state.pHValue);
 
-            // Turn on LEDS
+            var PH_OUTPUT = new Buffer(READ_LENGTH);
 
-            this.serialport.write("L,1\r");
+            i2c1.sendByteSync(PH_ADDR, PH_CMD_READ);
 
-            // Enable streaming
+            setTimeout(function () {
+                i2c1.i2cReadSync(PH_ADDR, READ_LENGTH, PH_OUTPUT);
+                
+                this.state.pHValue = String.fromCharCode.apply(String, PH_OUTPUT);
 
-            this.serialport.write("C,1\r");
+                this.publishStateChange();
+                
+                console.log(this.state.pHValue);
+            }.bind(this), READ_DELAY);
 
-            this.serialPort.on("data", function (data) {
-                console.log(data);
-            });
 
             deferred.resolve();
         }
@@ -89,6 +100,9 @@ function pHMeter() {
                 clearInterval(this.interval);
             }
         } else {
+            /**
+             **
+             */
         }
 
         deferred.resolve();
@@ -109,3 +123,4 @@ function pHMeter() {
     pHMeter.prototype.setState = function () {
     };
 }
+
