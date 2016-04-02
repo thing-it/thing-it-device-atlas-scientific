@@ -84,10 +84,13 @@ or the like ...)
 
 You can also run the calibration sequence from the **thing-it Mobile App**:
 
-<p align="center"><a href="./documentation/images/calibration.png"><img src="./documentation/images/calibration.png" width="70%" height="70%"></a></p>
+<p align="center"><a href="./documentation/images/calibration-1.png"><img src="./documentation/images/calibration-1.png" width="70%" height="70%"></a></p>
 
 Open the Device Page, click **Calibrate High**, enter the actual pH value (after waiting a few seconds for the value to stabilize) and then repeat 
 the procedure for **Calibrate Middle** and **Calibrate Low**.
+
+<p align="center"><a href="./documentation/images/calibration-2.png"><img src="./documentation/images/calibration-2.png" width="70%" height="70%"></a></p>
+
 
 ## Where to go from here ...
 
