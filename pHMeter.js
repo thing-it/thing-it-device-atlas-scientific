@@ -37,7 +37,16 @@ var _ = require('lodash');
 function pHMeter() {
     /**
      *
+     *
      */
+    var PH_ADDR = 0x63,
+//        PH_CMD_INFO = 0x49,
+        READ_DELAY = 1000,
+        READ_LENGTH = 32,
+        PH_CMD_READ = 0x52,
+        PH_QUERY_CALIBRATION = new Buffer('cal,?');
+
+
     pHMeter.prototype.start = function () {
         var deferred = q.defer();
 
@@ -52,25 +61,48 @@ function pHMeter() {
 
             deferred.resolve();
         } else {
-            if (!this.serialport) {
-                this.serialport = require('serialport');
+            if (!this.i2c) {
+                this.i2c = require('i2c-bus');
             }
 
-            // Clear serial buffer
+            var i2c1 = this.i2c.openSync(1);
 
-            this.serialport.write("\r");
+            /*
+            //checkCalibration
+            //i2c1.sendByteSync(PH_ADDR, PH_CMD_READ);
+            i2c1.i2cWriteSync(PH_ADDR, 5, PH_QUERY_CALIBRATION);
+            setTimeout(function () {
+                var PH_OUTPUT = new Buffer(READ_LENGTH);
+                i2c1.i2cReadSync(PH_ADDR, READ_LENGTH, PH_OUTPUT);
+//                console.log(String.fromCharCode.apply(String, PH_OUTPUT))
+                console.log(PH_OUTPUT.toString("ascii"));
 
-            // Turn on LEDS
 
-            this.serialport.write("L,1\r");
+                //this.state.pHValue = String.fromCharCode.apply(String, PH_OUTPUT);
+                //this.publishStateChange();
 
-            // Enable streaming
+                //console.log(this.state.pHValue);
+            }.bind(this), 1700);
+            */
 
-            this.serialport.write("C,1\r");
+             //Read PH Value
+            this.interval = setInterval(function () {
 
-            this.serialPort.on("data", function (data) {
-                console.log(data);
-            });
+                i2c1.sendByteSync(PH_ADDR, PH_CMD_READ);
+
+                setTimeout(function () {
+                    var PH_OUTPUT = new Buffer(READ_LENGTH);
+                    i2c1.i2cReadSync(PH_ADDR, READ_LENGTH, PH_OUTPUT);
+
+                    this.state.pHValue = PH_OUTPUT.toString("ascii");
+                    this.publishStateChange();
+
+                    console.log(this.state.pHValue);
+                }.bind(this), READ_DELAY);
+
+
+            }.bind(this), 20000);
+
 
             deferred.resolve();
         }
@@ -89,6 +121,9 @@ function pHMeter() {
                 clearInterval(this.interval);
             }
         } else {
+            /**
+             **
+             */
         }
 
         deferred.resolve();
@@ -109,3 +144,4 @@ function pHMeter() {
     pHMeter.prototype.setState = function () {
     };
 }
+
