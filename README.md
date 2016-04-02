@@ -64,11 +64,13 @@ and then start **[thing-it-node]** via
 tin run
 ```
 
-Install the **thing-it Mobile App** from the Apple Appstore or Google Play and set it up to connect to **[thing-it-node]** 
-locally as described [here](https://thing-it.com/thing-it/#/documentationPanel/mobileClient/connectionModes) or just connect your browser under 
-[http://localhost:3001](http://localhost:3001).
+If you don't want to use Autodiscovery, you may use configurations like the [sample configuration]("./examples.configuration").
 
 ## Mobile UI
+
+Install the **thing-it Mobile App** from the Apple Appstore or Google Play and set it up to connect to **[thing-it-node]** 
+locally as described [here](https://thing-it.com/thing-it/#/documentationPanel/mobileClient/connectionModes) or just connect your browser under 
+[http://localhost:3001](http://localhost:3001) to check how the Mobile UI would look like.
 
 The following screenshot shows the Node Page of the [sample configuration]("./examples.configuration"), which just defines 3 pH Meters:
 
