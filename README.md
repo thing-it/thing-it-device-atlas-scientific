@@ -64,8 +64,8 @@ and then start **[thing-it-node]** via
 tin run
 ```
 
-Note, that at this point Autodiscovery would only discover distinct products such as pHMeter or temperature sensor. It will not be able to distinguish between two
-pHMeters.
+Note, that at this point Autodiscovery would only discover distinct products such as pH meter or temperature sensor. It will not be able to distinguish between two
+pH meters if you set up an I2C bus as opposed to the single device setup above.
 
 If you don't want to use Autodiscovery, you may use configurations like the [sample configuration]("./examples.configuration").
 
@@ -84,13 +84,14 @@ or the like ...)
 
 You can also run the calibration sequence from the **thing-it Mobile App**:
 
-<p align="center"><a href="./documentation/images/calibration-1.png"><img src="./documentation/images/calibration-1.png" width="70%" height="70%"></a></p>
+<p align="center"><a href="./documentation/images/calibration-1.png"><img src="./documentation/images/calibration-1.png" width="50%" height="50%"></a></p>
 
 Open the Device Page, click **Calibrate High**, enter the actual pH value (after waiting a few seconds for the value to stabilize) and then repeat 
 the procedure for **Calibrate Middle** and **Calibrate Low**.
 
-<p align="center"><a href="./documentation/images/calibration-2.png"><img src="./documentation/images/calibration-2.png" width="70%" height="70%"></a></p>
+<p align="center"><a href="./documentation/images/calibration-2.png"><img src="./documentation/images/calibration-2.png" width="50%" height="50%"></a></p>
 
+Setting the I2C address works the same way.
 
 ## Where to go from here ...
 
