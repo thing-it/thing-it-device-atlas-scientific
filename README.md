@@ -67,7 +67,20 @@ tin run
 Note, that at this point Autodiscovery would only discover distinct products such as pH meter or temperature sensor. It will not be able to distinguish between two
 pH meters if you set up an I2C bus as opposed to the single device setup above.
 
-If you don't want to use Autodiscovery, you may use configurations like the [sample configuration]("./examples.configuration").
+If you don't want to use Autodiscovery, you may use configurations like the [sample configuration]("./examples.configuration") via
+
+```
+tin example --device atlas-scientific
+```
+
+If you want to pair the **[thing-it-node]** Gateway and its sample configuration with [thing-it.com](https://www.thing-it.com), invoke
+
+```
+tin pair --mesh Test
+```
+
+and enter your [thing-it.com](https://www.thing-it.com) account and password. The pairing will allow you to configure and monitor your local Gateway from 
+[thing-it.com](https://www.thing-it.com) and use the Mobile App below to connect to the Gateway from everywhere.
 
 ## Mobile UI
 
@@ -110,7 +123,7 @@ You may also be interested in
 [Groups](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/groupConfiguration), 
 [Services](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/serviceConfiguration), 
 [Event Processing](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/eventConfiguration), 
-[Storyboards](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/storyboardConfiguration) and 
+[Storyboards](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/storyboard    Configuration) and 
 [Jobs](https://www.thing-it.com/thing-it/#/documentationPanel/mobileClient/jobConfiguration) via your **[thing-it] Mobile App**.
 * Use [thing-it.com](https://www.thing-it.com) to safely connect your Node Box from everywhere, manage complex configurations, store and analyze historical data 
 and offer your configurations to others on the **[thing-it] Mesh Market**.
