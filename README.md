@@ -33,7 +33,7 @@ note that the I2C data wires need a 10k pullup resistor.
 
 ### Installation of NodeJS and [thing-it-node]
 
-First, install node.js and **[thing-it-node]** on your Raspberry Pi following the instructions on the [**[thing-it-node]** Wiki](https://github.com/marcgille/thing-it-node/wiki/Raspberry-Pi-Installation).
+First, install node.js and **[thing-it-node]** on your Raspberry Pi following the instructions on the [[thing-it-node] Wiki](https://github.com/marcgille/thing-it-node/wiki/Raspberry-Pi-Installation).
  
 ### Initialization and Start of [thing-it-node] 
 
