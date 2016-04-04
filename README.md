@@ -27,7 +27,6 @@ or for details like in the wireframe below
 
 <p align="center"><a href="./documentation/images/wireframe.png"><img src="./documentation/images/wireframe.png" width="70%" height="70%"></a></p>
 
-note that the I2C data wires need a 10k pullup resistor.
 
 [Atlas Scientific](http://atlas-scientific.com/) has plenty of documentation for the setup of the different probes.
 
