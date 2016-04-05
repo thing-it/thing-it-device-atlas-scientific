@@ -17,7 +17,7 @@ Aquaponics solution.
 ## Installation
 
 ### Hardware Setup
-Your **[thing-it-node]** communicate with your [Atlas Scientific] (http://atlas-scientific.com/) Device via the **I2C** Protocol. Because of that the Device have first to be switched manually to **I2C** mode.
+Your **[thing-it-node]** communicate with your [Atlas Scientific] (http://atlas-scientific.com/) Device via the **I2C** Protocol. Because of that the Device have first to be switched manually into **I2C** mode.
 This is described in detail on every [Atlas Scientific](http://atlas-scientific.com/) Device Datasheet.
 e.g. [PH Probe](https://www.atlas-scientific.com/_files/_datasheets/_circuit/pH_EZO_datasheet.pdf) on page 40.
 
@@ -37,13 +37,13 @@ or for details like in the wireframe below
 
 First, install node.js and **[thing-it-node]** on your Raspberry Pi following the instructions on the [[thing-it-node] Wiki](https://github.com/marcgille/thing-it-node/wiki/Raspberry-Pi-Installation).
 
-To let the Pi comunicate with the Atlas Device you have to activate **I2C** via
+To let the Pi comunicate with the Atlas Device you have to activate  the Pis **I2C** interface via
  
 ```
 sudo raspi-config
 ```
  
-Choose **8 Advanced Options** and then **7 I2C**.
+Choose **8. Advanced Options** and then **7. I2C**.
  
 ### Initialization and Start of [thing-it-node] 
 
