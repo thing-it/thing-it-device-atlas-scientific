@@ -17,8 +17,8 @@ Aquaponics solution.
 ## Installation
 
 ### Hardware Setup
-Your **[thing-it-node]** communicate with your [Atlas Device](http://atlas-scientific.com/) via the **I2C** Protocol. Because of that the Device have first to be switched manually to **I2C** mode.
-This is described in detail on every [Atlas Device](http://atlas-scientific.com/) Datasheet.
+Your **[thing-it-node]** communicate with your [Atlas Scientific] (http://atlas-scientific.com/) Device via the **I2C** Protocol. Because of that the Device have first to be switched manually to **I2C** mode.
+This is described in detail on every [Atlas Scientific](http://atlas-scientific.com/) Device Datasheet.
 e.g. [PH Probe](https://www.atlas-scientific.com/_files/_datasheets/_circuit/pH_EZO_datasheet.pdf) on page 40.
 
 Then connect your [Atlas Scientific](http://atlas-scientific.com/) metering product to the GPIOs of your Single-Board Computer
