@@ -40,7 +40,7 @@ To let the Pi comunicate with the Atlas Device you have to activate **I2C** via
 sudo raspi-config
 ```
  
-Choose **Advanced Options** and then **I2C**.
+Choose **8 Advanced Options** and then **7 I2C**.
  
 ### Initialization and Start of [thing-it-node] 
 
