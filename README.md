@@ -33,6 +33,14 @@ or for details like in the wireframe below
 ### Installation of NodeJS and [thing-it-node]
 
 First, install node.js and **[thing-it-node]** on your Raspberry Pi following the instructions on the [[thing-it-node] Wiki](https://github.com/marcgille/thing-it-node/wiki/Raspberry-Pi-Installation).
+
+To let the Pi comunicate with the Atlas Device you have to activate **I2C** via
+ 
+```
+sudo raspi-config
+```
+ 
+Choose **Advanced Options** and then **I2C**.
  
 ### Initialization and Start of [thing-it-node] 
 
