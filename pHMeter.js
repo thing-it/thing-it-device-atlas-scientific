@@ -234,8 +234,9 @@ function pHMeter() {
                 }
 
             }.bind(this), 1600);
-
         }
+
+        this.publishStateChange();
     };
 
 
@@ -260,6 +261,8 @@ function pHMeter() {
                 }
 
             }.bind(this), 1600);
+
+            this.publishStateChange();
         }
     };
 
@@ -286,6 +289,8 @@ function pHMeter() {
 
             }.bind(this), 1600);
         }
+
+        this.publishStateChange();
     };
 
 
@@ -310,6 +315,8 @@ function pHMeter() {
 
             }.bind(this), 1600);
         }
+
+        this.publishStateChange();
     };
 
     /**
@@ -320,6 +327,8 @@ function pHMeter() {
         } else {
             // TODO
         }
+
+        this.publishStateChange();
     };
 }
 
