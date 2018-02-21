@@ -77,9 +77,45 @@ function pHMeterDiscovery() {
         if (!this.node.isSimulated()) {
             // TODO For now, need to be able to switch for Discovery or inherit from Device
             this.logLevel = "debug";
-            this.scanForCameras();
             this.discoveryInterval = setInterval(this.scanForProbe.bind(this), 30000);
+        } else {
+            if (!this.i2c) {
+                this.i2c = require('i2c-bus');
+            }
+
+            var i2c1 = this.i2c.openSync(1);
+
+            //this.interval = setInterval(function () {// must have?
+
+            for (var ATLAS_DEVICE_ADDR = 0x01; i <= 0x7F; i++) {
+                console.log("ATLAS_DEVICE_ADDR: " + ATLAS_DEVICE_ADDR);
+                i2c1.sendByteSync(ATLAS_DEVICE_ADDR_ADDR, 0x49); //SEND ATLAS INFO REQUEST
+
+                setTimeout(function () {
+                    var PH_OUTPUT_INFO = new Buffer(9);
+                    i2c1.i2cReadSync(ATLAS_DEVICE_ADDR, 9, PH_OUTPUT_INFO);
+
+                    //var tmp = PH_OUTPUT_INFO.toString("ascii").indexOf("PH");
+
+                    if (PH_OUTPUT_INFO.toString("ascii").indexOf("PH") > -1) {
+                        console.log("PH Sensor found at: " + ATLAS_DEVICE_ADDR);
+                        //TODO Something like "publishStateChange() or push to actors list..
+
+                    } else {
+                        console.log("Nothing found at:  " + ATLAS_DEVICE_ADDR);
+                    }
+
+                    //this.state.pHValue = PH_OUTPUT_INFO.toString("ascii");
+                    this.publishStateChange();
+                }.bind(this), 300); //300ms delay
+
+            }
+
+            //}.bind(this), 20000);
+            deferred.resolve();
         }
+
+
     };
 
     pHMeterDiscovery.prototype.stop = function () {
@@ -98,7 +134,6 @@ function pHMeterDiscovery() {
  */
 function pHMeter() {
     var PH_STD_ADDR = 0x63, //TODO Implement Dynamic ADDR
-//        PH_CMD_INFO = 0x49,
 //        READ_DELAY = 1000,
         READ_LENGTH = 32,
         PH_CMD_READ = 0x52;
