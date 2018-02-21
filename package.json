@@ -1,6 +1,6 @@
 {
   "name": "thing-it-device-atlas-scientific",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "[thing-it-node] Device Plugin Atlas Scientific meter devices.",
   "authors": "Marc Gille, Julian Seibert",
   "keywords": [
@@ -15,9 +15,10 @@
     "url": "https://github.com/marcgille/thing-it-device-atlas-scientific"
   },
   "dependencies": {
+    "i2c-bus": "^1.0.2",
     "lodash": "^4.1.0",
     "q": "^1.4.1",
-    "i2c-bus": "^1.0.2",
+    "serialport": "^6.0.5",
     "thing-it-test": "0.0.15"
   }
 }
