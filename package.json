@@ -1,6 +1,6 @@
 {
   "name": "@thing-it/device-atlas-scientific",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "[thing-it-node] Device Plugin Atlas Scientific meter devices.",
   "authors": "Marc Gille, Julian Seibert",
   "keywords": [
