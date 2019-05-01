@@ -1,5 +1,5 @@
 {
-  "name": "thing-it-device-atlas-scientific",
+  "name": "@thing-it/device-atlas-scientific",
   "version": "0.0.19",
   "description": "[thing-it-node] Device Plugin Atlas Scientific meter devices.",
   "authors": "Marc Gille, Julian Seibert",
@@ -10,9 +10,12 @@
     "pH",
     "Aquaponics"
   ],
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcgille/thing-it-device-atlas-scientific"
+    "url": "https://github.com/thing-it/thing-it-device-atlas-scientific"
   },
   "dependencies": {
     "i2c-bus": "^1.0.2",
