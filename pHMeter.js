@@ -143,6 +143,12 @@ function pHMeter() {
     pHMeter.prototype.start = function () {
         var deferred = q.defer();
 
+        this.operationalState = {
+            status: 'PENDING',
+            message: 'Waiting for initialization...'
+        };
+        this.publishOperationalStateChange();
+
         this.state = {pHValue: 6.0, calibrationHigh: 7.0, calibrationMiddle: 6.0, calibrationLow: 5.0};
 
         if (this.isSimulated()) {
@@ -151,6 +157,13 @@ function pHMeter() {
 
                 this.publishStateChange();
             }.bind(this), 20000);
+
+
+            this.operationalState = {
+                status: 'OK',
+                message: 'Atlas Scientific pH Meter successfully initialized'
+            }
+            this.publishOperationalStateChange();
 
             deferred.resolve();
         } else {
@@ -175,6 +188,12 @@ function pHMeter() {
 
                 }.bind(this), 1000);
             }.bind(this), 20000);
+
+            this.operationalState = {
+                status: 'OK',
+                message: 'Atlas Scientific pH Meter successfully initialized'
+            }
+            this.publishOperationalStateChange();
 
             deferred.resolve();
         }
