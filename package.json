@@ -18,10 +18,10 @@
     "url": "https://github.com/thing-it/thing-it-device-atlas-scientific"
   },
   "dependencies": {
-    "i2c-bus": "^1.0.2",
-    "lodash": "^4.1.0",
+    "i2c-bus": "^5.0.0",
+    "lodash": "^4.17.15",
     "q": "^1.4.1",
-    "serialport": "^6.0.5",
-    "thing-it-test": "0.0.15"
+    "serialport": "^7.1.5",
+    "thing-it-test": "0.0.32"
   }
 }
